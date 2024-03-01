@@ -473,7 +473,7 @@ public class PracticeTest {
     }
 
     @Test
-    public void shouldGetLongestNameLengthEmployee() {
+    public void shouldGetLongestNameLengthEmployee() throws Exception {
         List<Employee> employees = Practice.getLongestNamedEmployee();
         int expectedValue = 6;
         Assert.assertEquals(expectedValue,employees.size());
