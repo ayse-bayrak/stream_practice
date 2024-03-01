@@ -477,6 +477,7 @@ public class PracticeTest {
         List<Employee> employees = Practice.getLongestNamedEmployee();
         int expectedValue = 6;
         Assert.assertEquals(expectedValue,employees.size());
+
     }
 
     @Test

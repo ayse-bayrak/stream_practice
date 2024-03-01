@@ -463,14 +463,12 @@ public class Practice {
 
 
     }
-
     // Display the employee(s) with the longest full name(s)
     public static List<Employee> getLongestNamedEmployee() {
-        //TODO Implement the method
-        return  getAllEmployees().stream()
-                .filter(p-> {
+        return getAllEmployees().stream()
+                .filter(p -> {
                     try {
-                        return (p.getLastName()+p.getLastName()).length()==getLongestNameLength();
+                        return (p.getFirstName() + p.getLastName()).length() + 1 == getLongestNameLength();
                     } catch (Exception e) {
                         throw new RuntimeException(e);
                     }
