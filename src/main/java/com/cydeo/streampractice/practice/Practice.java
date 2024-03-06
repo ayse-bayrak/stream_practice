@@ -246,14 +246,10 @@ public class Practice {
 
     public static List<Employee> getSecondMaxSalaryEmployee() {
         //TODO Implement the method
-//        Long second = getAllEmployees().stream()
-//                .max(Comparator.comparing(Employee::getSalary))
-//                .stream().skip(1)
-//                .findAny().get().getSalary();
        return getAllEmployees().stream()
                .filter(p-> {
                    try {
-                       return p.getSalary()==getSecondMaxSalary();
+                       return p.getSalary().equals(getSecondMaxSalary());
                    } catch (Exception e) {
                        throw new RuntimeException(e);
                    }
@@ -299,7 +295,7 @@ public class Practice {
         return  getAllEmployees().stream()
                 .filter(p-> {
                     try {
-                        return Objects.equals(p.getSalary(),getSecondMinSalary());
+                        return p.getSalary().equals(getSecondMinSalary());
                     } catch (Exception e) {
                         throw new RuntimeException(e);
                     }
